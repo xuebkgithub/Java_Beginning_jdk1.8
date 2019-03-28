@@ -7,4 +7,4 @@ https://alleniverson.gitbooks.io/java-basic-introduction/content/
 
 目录
 ------
-1. [Java 基础](./Chapter1)
+1. [Java 基础](21)
