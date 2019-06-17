@@ -1,4 +1,4 @@
-package banking5_1;
+package banking7.domain;
 
 public class Account {
   protected double balance;
@@ -27,13 +27,12 @@ public class Account {
     }
     return false;
   }
-  public boolean withdraw(double atm){
+  public void withdraw (double atm) throws OverdraftException {
     if(balance >= atm){
       balance -= atm;
-      return true;
+    }else {
+      throw new OverdraftException("储蓄 余额小于您要取得钱", atm - balance);
     }
-//      System.out.println("余额小于您要取得钱");
-      return false;
   }
 
   public void setAccount_type(String account_type) {

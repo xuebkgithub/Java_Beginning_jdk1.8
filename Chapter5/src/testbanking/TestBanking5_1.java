@@ -6,7 +6,7 @@ package testbanking;
  * and generates a report of current account balances.
  */
 
-import banking5_1.*;
+import banking6.*;
 
 import java.text.NumberFormat;
 

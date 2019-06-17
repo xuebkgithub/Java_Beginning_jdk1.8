@@ -5,7 +5,7 @@ package testbanking;
  * and performs a series of transactions with the Account object.
  */
 
-import banking5_1.*;
+import banking6.*;
 
 public class TestBanking5{
 
