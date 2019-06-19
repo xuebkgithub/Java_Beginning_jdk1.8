@@ -9,6 +9,28 @@ import java.util.*;
  */
 public class TestGeneric {
   @Test
+  public void test07(){
+    List<String> list = new ArrayList<String>(); // 这里的 ? 是代表什么类型都可以放进去
+    System.out.println("===== ===== ===== ===== ===== ===== ===== ===== ===== =====");
+    // 添加具体内容
+    list.add("0: 123");
+    list.add("1: 234");
+    // 赋值给 通配符的 List
+    List<?> list1 = list;
+    // 对里面的内容.进行读取
+    Iterator<?> iterator = list1.iterator();
+    while (iterator.hasNext()){
+      Object object = iterator.next();
+      System.out.println(object);
+      System.out.println(object.getClass());
+    }
+//    list1.add(123); // 这里 是添加不了 任何内容的
+    list1.add(null); // 这个 null 是可以写入的
+    System.out.println("===== ===== ===== ===== ===== ===== ===== ===== ===== =====");
+  }
+
+
+  @Test
   public void test06(){
     List<?> list = null; // 这里的 ? 是代表什么类型都可以放进去
     List<Object> list1 = new ArrayList<Object>();
@@ -33,18 +55,15 @@ public class TestGeneric {
     L1 = L2; // 这里就可以实现
     L3 = L4;
     System.out.println("===== ===== ===== ===== ===== ===== ===== ===== ===== =====");
-
-
-
   }
 
-  private void 通配符验证(? extends E 类){
-
-  }
-
-  private void 通配符验证(? super E 类){
-
-  }
+//  private void 通配符验证(? extends E 类){
+//
+//  }
+//
+//  private void 通配符验证(? super E 类){
+//
+//  }
 
   @Test
   public void test05(){
