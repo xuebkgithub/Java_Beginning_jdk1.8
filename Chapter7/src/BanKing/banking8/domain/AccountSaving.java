@@ -2,11 +2,11 @@ package BanKing.banking8.domain;
 /*
 储蓄账户
  */
-public class SavingAccount extends Account{
+public class AccountSaving extends Account{
   protected double interestRate;
 
-  public SavingAccount(double init_balance, double interestRate){
-    super(init_balance, "SavingAccount");
+  public AccountSaving(double init_balance, double interestRate){
+    super(init_balance, "AccountSaving");
     this.setInterestRate(interestRate);
   }
 

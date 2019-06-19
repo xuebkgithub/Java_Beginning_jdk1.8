@@ -1,6 +1,7 @@
 package BanKing.banking8.domain;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Bank {
@@ -27,4 +28,7 @@ public class Bank {
     return customers.get(index);
   }
 
+  public Iterator<Customer> getCustomers(){
+    return this.customers.iterator();
+  }
 }

@@ -2,14 +2,14 @@ package BanKing.banking8.domain;
 /*
 储蓄账户
  */
-public class CheckingAccount extends Account{
+public class AccountChecking extends Account{
   protected double overdraftProtection;
 
-  public CheckingAccount(double init_balance){
-    super(init_balance, "CheckingAccount");
+  public AccountChecking(double init_balance){
+    super(init_balance, "AccountChecking");
   }
-  public CheckingAccount(double init_balance, double overdraftProtection){
-    super(init_balance, "CheckingAccount");
+  public AccountChecking(double init_balance, double overdraftProtection){
+    super(init_balance, "AccountChecking");
     this.setoverdraftProtection(overdraftProtection);
   }
 
